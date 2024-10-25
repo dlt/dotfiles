@@ -1,0 +1,28 @@
+{
+    "description": "Map Command+R to Control+R in Terminal",
+    "manipulators": [
+        {
+            "conditions": [
+                {
+                    "bundle_identifiers": [
+                        "^com\\.apple\\.Terminal$",
+                        "^com\\.googlecode\\.iterm2$",
+                        "^org\\.alacritty$"
+                    ],
+                    "type": "frontmost_application_if"
+                }
+            ],
+            "from": {
+                "key_code": "r",
+                "modifiers": { "mandatory": ["left_command"] }
+            },
+            "to": [
+                {
+                    "key_code": "r",
+                    "modifiers": ["control"]
+                }
+            ],
+            "type": "basic"
+        }
+    ]
+}
