@@ -1,0 +1,51 @@
+import = ["/Users/dlt/.config/alacritty/themes/gruvbox-material-alacritty.yml"]
+live_config_reload = true
+
+[cursor.style]
+blinking = "On"
+shape = "Block"
+
+[font]
+size = 15
+
+[font.bold]
+family = "FiraCode Nerd Font Mono"
+style = "Bold"
+
+[font.bold_italic]
+family = "Hack Nerd Font"
+style = "Bold Italic"
+
+[font.italic]
+family = "Hack Nerd Font"
+style = "Italic"
+
+[font.normal]
+family = "FiraCode Nerd Font Mono"
+style = "Regular"
+
+[scrolling]
+multiplier = 15
+
+[selection]
+save_to_clipboard = true
+semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
+
+[window]
+decorations = "none"
+dynamic_padding = false
+dynamic_title = false
+opacity = 0.95
+startup_mode = "Maximized"
+
+[window.dimensions]
+columns = 150
+lines = 45
+
+[window.padding]
+x = 0
+y = 0
+
+[window.position]
+x = 2500
+y = 700
