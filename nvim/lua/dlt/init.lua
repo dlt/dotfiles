@@ -1,4 +1,5 @@
 require("dlt.remap")
+require("dlt.pckr")
 
 
 vim.api.nvim_create_autocmd("TextYankPost", {
