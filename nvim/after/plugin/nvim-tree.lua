@@ -15,6 +15,7 @@ require("nvim-tree").setup({
   },
   view = {
     width = 30,
+    adaptive_size = false
   },
   renderer = {
     group_empty = true,
@@ -22,6 +23,11 @@ require("nvim-tree").setup({
   filters = {
     dotfiles = true,
   },
+  actions = {
+	  open_file = {
+		  resize_window = false
+	  }
+  }
 })
 
 vim.keymap.set("n", "<leader>tt", ":NvimTreeToggle<enter>")

@@ -1,6 +1,6 @@
 require("dlt.remap")
 require("dlt.pckr")
-
+local vim = vim
 
 vim.api.nvim_create_autocmd("TextYankPost", {
 	desc = "Highlight when yanking",
@@ -42,3 +42,27 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 		vim.highlight.on_yank()
 	end,
 })
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "php",
+  callback = function()
+    vim.bo.tabstop = 4
+    vim.bo.shiftwidth = 4
+    vim.bo.expandtab = true
+    vim.bo.smartindent = true
+    vim.bo.autoindent = true
+  end,
+})
+
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "sql", "mysql", "plsql" },
+  callback = function()
+    require('cmp').setup.buffer({
+      sources = {
+        { name = 'vim-dadbod-completion' }
+      }
+    })
+  end,
+})
+

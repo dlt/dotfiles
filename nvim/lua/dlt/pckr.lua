@@ -1,3 +1,5 @@
+local vim = vim
+
 local function bootstrap_pckr()
   local pckr_path = vim.fn.stdpath("data") .. "/pckr/pckr.nvim"
 
@@ -64,4 +66,16 @@ require('pckr').add{
 	{ "rcarriga/nvim-dap-ui", dependencies = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} };
 
 	{ 'lewis6991/gitsigns.nvim' };
+
+	'zbirenbaum/copilot.lua';
+	'nvim-lua/plenary.nvim';
+
+	{ 'CopilotC-Nvim/CopilotChat.nvim', { branch = 'main' } };
+
+	'tpope/vim-dadbod';
+	"kristijanhusak/vim-dadbod-ui";
+        "kristijanhusak/vim-dadbod-completion";
+	"mg979/vim-visual-multi";
+	"romgrk/barbar.nvim";
+	"nvim-tree/nvim-web-devicons";
 }

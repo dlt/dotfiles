@@ -1,3 +1,4 @@
+local vim = vim
 local lsp_zero = require('lsp-zero')
 
 local lsp_attach = function(client, bufnr)
@@ -33,6 +34,7 @@ cmp.setup({
   --- (Optional) Show source name in completion menu
   formatting = cmp_format,
   mapping = cmp.mapping.preset.insert({
-	  ['<tab>'] = cmp.mapping.confirm({ select = true })
+	  ['<cr>'] = cmp.mapping.confirm({ select = true })
   })
 })
+
